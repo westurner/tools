@@ -606,9 +606,14 @@ written in :ref:`C` and :ref:`Perl`.
 Python Packages
 ~~~~~~~~~~~~~~~~~~~~~~~~
 | Homepage: https://pypi.python.org/pypi
+| Download: https://pypi.python.org/simple/
 | Docs: https://packaging.python.org/en/latest/
+| Docs: https://packaging.python.org/en/latest/current/
+| Docs: https://packaging.python.org/en/latest/distributing/
 | Docs: https://packaging.python.org/en/latest/peps.html
 | Docs: https://packaging.python.org/en/latest/projects.html
+| Docs: https://packaging.python.org/en/latest/specifications/
+| Docs: https://pypaio.readthedocs.org/en/latest/roadmap/
 
 A :ref:`Python` Package is a collection of source code and package data files.
 
@@ -646,7 +651,25 @@ A :ref:`Python` Package is a collection of source code and package data files.
   contained in packages in order to resolve a dependency graph
   (which can contain cycles) and install necessary packages.
 
+.
 
+* PyPA Tool Recommendations
+
+  * | Docs: https://packaging.python.org/en/latest/current
+
+* PyPA Python Package PEPs
+
+  * | Docs: https://packaging.python.org/en/latest/peps.html
+
+* PyPA Projects List
+
+  * | Docs: https://packaging.python.org/en/latest/projects.html
+
+
+.. note:: :ref:`JSON-LD-` for package metadata and environment build
+   metadata could be helpful.
+
+   - https://github.com/pypa/interoperability-peps/issues/31
 
 
 .. index:: distutils
@@ -841,13 +864,34 @@ PyPI is the Python Package Index.
 Warehouse
 ++++++++++
 | Homepage: https://warehouse.python.org/
-| Docs: https://warehouse.readthedocs.org/en/latest/
 | Src: https://github.com/pypa/warehouse
+| Docs: https://warehouse.readthedocs.org/en/latest/
 
 
 Warehouse is the "Next Generation Python Package Repository".
 
 All packages uploaded to :ref:`PyPI` are also available from Warehouse.
+
+
+.. index:: Devpi
+.. _devpi:
+
+Devpi
+++++++++
+| Homepage: http://doc.devpi.net/
+| Src: hg https://bitbucket.org/hpk42/devpi
+| Issues: https://bitbucket.org/hpk42/devpi/issues
+| PyPI: https://pypi.python.org/pypi/devpi-server
+| PyPI: https://pypi.python.org/pypi/devpi-web
+| PyPI: https://pypi.python.org/pypi/devpi-client
+| Docs: http://doc.devpi.net/latest/
+| Docs: http://doc.devpi.net/latest/userman/
+| Docs: http://doc.devpi.net/latest/userman/devpi_concepts.html
+| Docs: http://doc.devpi.net/latest/userman/devpi_commands.html#cmdref-test
+| Docs: http://doc.devpi.net/latest/userman/devpi_misc.html
+
+Devpi is a server and client solution for :ref:`Python package <python
+packages>` mirroring, hosting, and testing.
 
 
 .. index:: Python Wheel
