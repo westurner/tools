@@ -1104,7 +1104,7 @@ Creating a new release with :ref:`Git` and :ref:`GitFlow`:
   git flow feature
   git flow feature finish ENH_print_hello_world   # ENH<TAB>
 
-  ## release/v0.1.0
+  ## release/0.1.0
   git flow release start 0.1.0
   #git commit (e.g. update __version__, setup.py, release notes)
   git flow release finish 0.1.0
@@ -1182,7 +1182,7 @@ Creating a new release with :ref:`Git` and :ref:`HubFlow`:
   #git commit, commit
   git hf feature finish ENH_print_hello_world   # ENH<TAB>
 
-  ## release/v0.1.0
+  ## release/0.1.0
   git hf release start 0.1.0
   ## commit (e.g. update __version__, setup.py, release notes)
   git hf release finish 0.1.0
