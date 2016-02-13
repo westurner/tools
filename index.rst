@@ -597,6 +597,9 @@ written in :ref:`C` and :ref:`Perl`.
     transfer required to regularly retrieve and upgrade to
     the latest repository packages.
 
+.. note:: There's not yet a :ref:`debtorrent` for
+   :ref:`RPM`, :ref:`YUM`, :ref:`DNF`.
+
 
 .. index:: Egg
 .. index:: Python Egg
