@@ -387,6 +387,25 @@ emerge
 packages built from :ref:`ebuilds <ebuild>` [from :ref:`Portage`].
 
 
+.. index:: fpm
+.. _fpm:
+
+fpm
+~~~~~
+| Wikipedia:
+| Src: https://github.com/jordansissel/fpm
+| Docs: https://github.com/jordansissel/fpm/wiki/
+| Docs: https://github.com/jordansissel/fpm/wiki/PackageMakeInstall
+
+fpm (*effing package management*) is a tool for building many types
+of software packages from many other types of software packages
+(e.g. :ref:`DEB`. :ref:`RPM`, :ref:`Python Packages`);
+often more easily than working with the actual package manager.
+
+* fpm package source types include: dir rpm gem python empty tar deb cpan npm osxpkg pear pkgin virtualenv zip.
+* fpm target package types include: rpm deb solaris puppet dir osxpkg p5p puppet sh tar zip
+
+
 .. index:: Brew
 .. index:: Homebrew
 .. _homebrew:
