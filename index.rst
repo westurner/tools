@@ -6594,6 +6594,11 @@ Clonezilla
 ~~~~~~~~~~~~
 | Wikipedia: https://en.wikipedia.org/wiki/Clonezilla
 | DistroWatch: http://distrowatch.com/table.php?distribution=clonezilla
+| Homepage: http://clonezilla.org/
+| Src: git https://github.com/stevenshiau/clonezilla
+| Docs: http://clonezilla.org/clonezilla-live.php 
+| Docs: http://clonezilla.org/clonezilla-SE/
+| Docs: http://clonezilla.org/related-links/
 
 Clonezilla is an open source :ref:`Linux` distribution
 which is bootable from a CD/DVD/USB (a LiveCD, LiveDVD, LiveUSB)
@@ -6605,7 +6610,19 @@ to one or more computers over a LAN.
 
 * Clonezilla contains :ref:`FSArchiver`, :ref:`partclone`,
   :ref:`partimage`, and :ref:`rsync`.
+* Clonezilla can backup and restore very many (if not most) filesystems.
+* Clonezilla supports MBR, GPT, and uEFI.
+* Clonezilla can restore a networked multicast group (e.g. lab)
+  of machines to a system image (saving TCP overhead when sharing
+  the same multi-gigabyte / terabyte image to zero or more machines);
+  and boot them with PXE and/or Wake-on-Lan.
+
+  * :ref:`bup`, :ref:`debtorrent`
+
+* Clonezilla can backup to disk, ssh, samba, NFS, WebDAV
+* drbl-winroll helps with restoring :ref:`windows` images
 * :ref:`SystemRescueCD` also contains :ref:`partimage`.
+* :ref:`Cobbler` also supports PXE boot from images.
 
 
 .. index:: Duplicity
