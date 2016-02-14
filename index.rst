@@ -3110,11 +3110,79 @@ Windows
 | Docs: https://www.microsoft.com/enable/products/docs/
 | Docs:
 
-Windows is a NT-kernel based operating system.
+Microsoft Windows is a NT-kernel based operating system.
 
-There used to be a POSIX compatibility mode.
+* There used to be a POSIX compatibility mode.
+* Chocolatey maintains a set of :ref:`NuGet` packages for Windows.
 
-Chocolatey maintains a set of :ref:`NuGet` packages for Windows.
+
+.. index:: Windows Sysinternals
+.. _windows sysinternals:
+
+Windows Sysinternals
++++++++++++++++++++++++
+| Wikipedia: https://en.wikipedia.org/wiki/Sysinternals
+| Homepage: https://technet.microsoft.com/en-us/sysinternals
+| Download: https://technet.microsoft.com/en-us/sysinternals/bb842062
+| Download: http://live.sysinternals.com/
+| Docs: https://technet.microsoft.com/en-us/sysinternals/bb545027
+| Docs: http://blogs.technet.com/sysinternals
+| Docs: http://blogs.technet.com/b/sysinternals/
+
+Windows Sysinternals is a group of tools for working with
+:ref:`Windows`.
+
+* | Download: https://technet.microsoft.com/en-us/sysinternals/bb842062
+
+  * File & Disk: https://technet.microsoft.com/en-us/sysinternals/bb545046
+  * Networking: https://technet.microsoft.com/en-us/sysinternals/bb795532
+  * Process: https://technet.microsoft.com/en-us/sysinternals/bb795533
+
+    * Process Explorer:
+
+      https://technet.microsoft.com/en-us/sysinternals/processexplorer
+
+      * You can replace Task Manager (``taskman.exe``)
+        with Process Explorer (``procexp.exe``)
+        in many versions of Windows (e.g. so that ``ctrl-alt-delete``
+        launches ``procexp.exe``
+      * ``Win+R`` launches the run dialog
+
+        .. code::
+
+            ## Win+R commands
+            C:/           # open explorer to 'C:/'
+            %UserProfile% # open the user profile env var directory
+            cmd[.exe]     # open a command prompt
+            calc          # calculator
+            control       # control panel
+            services.msc  # services management
+            compmgmt.msc  # computer management
+            eventvwr.msc  # event viewer
+            Wupdmgr       # windows update manager
+
+        * http://www.pcsteps.com/1675-run-command-complete-list-windows/
+
+      * `<https://en.wikipedia.org/wiki/PATH_(variable)#DOS.2C_OS.2F2.2C_and_Windows>`__
+
+        + ``%PATH%`` determines which commands you can run without typing
+          a full absolute path. (Some programs will not run if other
+          programs are not in a directory included in
+          a user's current ``%PATH%`` variable)
+
+          + The ``%PATH%`` variable is determined by key value pairs in
+            the Windows Registry and can be set for:
+
+            + The current prompt (with ``SET PATH=C:/additionalpath;%PATH%``)
+            + A user
+            + The machine
+
+            https://stackoverflow.com/questions/8358265/how-to-update-path-variable-permanently-from-cmd-windows
+
+
+  * Security: https://technet.microsoft.com/en-us/sysinternals/bb795534
+  * System Information: https://technet.microsoft.com/en-us/sysinternals/bb795535
+  * Miscellaneous: https://technet.microsoft.com/en-us/sysinternals/bb842059
 
 
 .. index:: WSUS Offline Update
