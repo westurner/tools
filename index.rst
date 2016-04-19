@@ -414,7 +414,7 @@ Homebrew
 ~~~~~~~~~~
 | Wikipedia: `<https://en.wikipedia.org/wiki/Homebrew_(package_management_software)>`__
 | Homepage: http://brew.sh/
-
+| Src: https://github.com/Homebrew/brew
 
 Homebrew is a package manager (``brew``) for :ref:`OSX`.
 
