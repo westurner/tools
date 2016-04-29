@@ -4535,7 +4535,7 @@ for many languages (:ref:`Python`, :ref:`Ruby`, :ref:`Java`,
 
 Jupyter Notebook
 +++++++++++++++++++
-| Wikipedia: https://en.wikipedia.org/wiki/IPython#Notebook
+| Wikipedia: https://en.wikipedia.org/wiki/Jupyter#Notebook
 | Src: https://github.com/jupyter/notebook
 
 :ref:`Jupyter` Notebook is the latest :ref:`IPython Notebook`.
