@@ -4755,6 +4755,18 @@ and can write errors to stderr.
   https://github.com/westurner/notebooks/blob/gh-pages/Makefile
 
 
+.. index:: RISE
+.. index:: Jupyter RISE
+.. _rise:
+
+RISE
++++++++++++++
+| Src: https://github.com/damianavila/RISE
+
+    Reveal.js - Jupyter/IPython Slideshow Extension,
+    also known as live_reveal
+
+* Interactive presentations with live source code evaluation
 
 
 .. index:: PowerShell
