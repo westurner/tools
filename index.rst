@@ -3817,10 +3817,11 @@ runC
 
 runC is a container abstraction 
 
-  runc is a CLI tool for spawning and running containers according to the OCI specification.
+  runc is a CLI tool for spawning and running containers according to
+  the :ref:`OCI` specification.
 
 - runC builds upon the :ref:`libcontainer` abstraction
-  and the OCI (*Open Container Initiative*) container specification.
+  and the :ref:`OCI` container specification.
 - runC works on :ref:`Linux`, :ref:`OSX`, and :ref:`Windows`.
 - runC containers do not require a daemon process.
 - runC containers can run as e.g. a systemd service unit.
