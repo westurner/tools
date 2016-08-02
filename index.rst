@@ -3878,15 +3878,17 @@ to partition process workloads across one or more host systems.
 
     Docker Compose
         Docker Compose is a Python application for defining and managing
-        services (Docker Containers) and networks with a
-        ``docker-compose.yml`` :ref:`YAML` configuration file.
+        services (:term:`Docker containers <docker container>`) and
+        networks with a ``docker-compose.yml`` :ref:`YAML` configuration
+        file.
 
     Docker Image
         A Docker Image is an archived container filesystem with
         configuration which is usually defined by a :term:`Dockerfile`.
 
     Docker Hub
-        Docker Hub is a cloud-based registry service for Docker Images.
+        Docker Hub is a cloud-based registry service for
+        :term:`Docker Images <Docker Image>`.
 
     Docker Cloud
         Docker Cloud is the hosting service offered by Docker.
