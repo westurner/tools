@@ -4807,6 +4807,24 @@ See also:
   * https://wrdrd.com/docs/consulting/software-development#refactoring
   * https://wrdrd.com/docs/consulting/data-science#reproducibility
 
+
+.. index:: nosebook
+.. _nosebook:
+
+nosebook
+~~~~~~~~~~
+| Src: https://github.com/bollwyvl/nosebook
+
+nosebook is a tool for finding and running tests in :ref:`nbformat`
+:ref:`IPython Notebooks <ipython notebooks>`
+and :ref:`Jupyter Notebooks <jupyter notebook>`
+with ``nose``.
+
+See also:
+
+* https://westurner.org/wiki/awesome-python-testing#nose
+
+
 .. index:: Jupyter
 .. index:: Project Jupyter
 .. _jupyter:
