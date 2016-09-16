@@ -1884,6 +1884,7 @@ Go
 | Homepage: http://golang.org/
 | Docs: http://golang.org/doc/
 | Src: hg https://code.google.com/p/go/
+| Docs: https://learnxinyminutes.com/docs/go/
 
 Go is a free and open source
 statically-typed :reF:`C`-based third generation language.
