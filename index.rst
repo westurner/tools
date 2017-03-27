@@ -2122,6 +2122,7 @@ Python
 | Docs: https://en.wikiversity.org/wiki/Python
 | Docs: https://www.class-central.com/search?q=python
 | Docs: http://learnxinyminutes.com/docs/python/
+| Awesome: https://github.com/vinta/awesome-python
 
 Python is a free and open source
 dynamically-typed, :ref:`C`-based third-generation
