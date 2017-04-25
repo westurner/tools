@@ -8,10 +8,10 @@
 Tools
 ================
 
-| Docs: https://westurner.org/tools/
+| Docs: https://westurner.github.io/tools/
 | Src: https://github.com/westurner/tools
 
-See Also: https://westurner.org/wiki/projects#tools
+See Also: https://westurner.github.io/wiki/projects#tools
 
 
 .. index:: Packages
@@ -292,7 +292,83 @@ Sources:
 
 
 
-See also: :ref:`Anaconda`
+See also: :ref:`Anaconda`, :ref:`conda-forge` (:ref:`conda-smithy`)
+
+
+.. index:: conda-forge
+.. _conda-forge:
+
+conda-forge
+~~~~~~~~~~~~~~~~~
+| Homepage: https://conda-forge.github.io/
+| Src: https://github.com/conda-forge
+| Src: https://github.com/conda-forge/feedstocks
+| Src: https://github.com/conda-forge/feedstocks/tree/master/feedstocks
+| Src: https://github.com/conda-forge/staged-recipes
+| DockerHub: https://hub.docker.com/r/condaforge/linux-anvil
+| Docs: https://conda-forge.github.io/docs/
+| Docs: https://conda-forge.github.io/docs/recipe.html
+
+* https://conda-forge.github.io/#add_recipe
+
+  * A. fork: https://github.com/conda-forge/staged-recipes
+  
+    * meta.yaml https://github.com/conda-forge/staged-recipes/blob/master/recipes/example/meta.yaml
+    
+  * B. conda-smithy
+    
+  * meta.yaml
+  
+    * Docs: numpy x.x: https://conda-forge.github.io/docs/meta.html#building-against-numpy
+    
+  * circle.yml
+  
+    * https://github.com/conda-forge/staged-recipes/blob/master/circle.yml
+    
+  * .travis.yml
+  
+    * https://github.com/conda-forge/staged-recipes/blob/master/.travis.yml
+    
+  * appveyor.yml
+  
+    * https://github.com/conda-forge/staged-recipes/blob/master/appveyor.yml
+    
+  * conda-forge.yml
+  * run_docker_build.sh
+    https://github.com/conda-forge/staged-recipes/blob/master/scripts/run_docker_build.sh
+  * bootstrap-obvious-ci-and-miniconda.py
+    https://github.com/conda-forge/conda-smithy/blob/master/bootstrap-obvious-ci-and-miniconda.py
+
+.. code:: bash
+
+    # create a conda package recipe from a pypi package
+    cd $VIRTUAL_ENV/src
+    conda skeleton pypi jupyterthemes
+    ls -ld jupyterthemes/
+    edit jupyterthemes/meta.yaml
+    # - git repo tags || pypi releases
+
+    # create a conda-forge feedstock from a conda recipe
+    ## https://github.com/conda-forge/conda-smithy#making-a-new-feedstock
+    cd $VIRTUAL_ENV/src
+    ls -ld jupyterthemes
+    conda-smithy init jupyterhemes
+    ls jupyterthemes-feedstock/
+
+    # build a conda-forge feedstock with docker
+    # FROM condaforge/linux-anvil
+    cat ./scripts/run_docker_build.sh
+    ./scripts/run_docker_build.sh
+    ./ci_support/run_docker_build.sh
+    
+    
+.. index:: conda-smithy
+.. _conda-smithy:
+
+conda-smithy
+~~~~~~~~~~~~~~
+| Src: https://github.com/conda-forge/conda-smithy
+| Docs: https://github.com/conda-forge/conda-smithy#making-a-new-feedstock
 
 
 .. index:: DEB
@@ -1132,25 +1208,25 @@ the defaults are:
 .. table:: GitFlow Branch Names
    :class: table-striped table-responsive
 
-   +--------------------+-------------------------------------------------------------------------+
-   | **Branch Name**    | **Description**                                                         |
-   |                    | (and `Code Labels <https://westurner.org/wiki/workflow#code-labels>`__) |
-   +--------------------+-------------------------------------------------------------------------+
-   | ``master``         | Stable trunk (latest release)                                           |
-   +--------------------+-------------------------------------------------------------------------+
-   | ``develop``        | Development main line                                                   |
-   +--------------------+-------------------------------------------------------------------------+
-   | ``feature/<name>`` | New features for the next release (e.g. ``ENH``, ``PRF``)               |
-   +--------------------+-------------------------------------------------------------------------+
-   | ``release/<name>`` | In-progress release branches (e.g. ``RLS``)                             |
-   +--------------------+-------------------------------------------------------------------------+
-   | ``hotfix/<name>``  | Fixes to merge to both ``master`` and ``develop``                       |
-   |                    | (e.g. ``BUG``, ``TST``, ``DOC``)                                        |
-   +--------------------+-------------------------------------------------------------------------+
-   | ``support/<name>`` | "What is the 'support' branch?"                                         |
-   |                    |                                                                         |
-   |                    | https://github.com/nvie/gitflow/wiki/FAQ                                |
-   +--------------------+-------------------------------------------------------------------------+
+   +--------------------+-------------------------------------------------------------------------------+
+   | **Branch Name**    | **Description**                                                               |
+   |                    | (and `Code Labels <https://westurner.github.io/wiki/workflow#code-labels>`__) |
+   +--------------------+-------------------------------------------------------------------------------+
+   | ``master``         | Stable trunk (latest release)                                                 |
+   +--------------------+-------------------------------------------------------------------------------+
+   | ``develop``        | Development main line                                                         |
+   +--------------------+-------------------------------------------------------------------------------+
+   | ``feature/<name>`` | New features for the next release (e.g. ``ENH``, ``PRF``)                     |
+   +--------------------+-------------------------------------------------------------------------------+
+   | ``release/<name>`` | In-progress release branches (e.g. ``RLS``)                                   |
+   +--------------------+-------------------------------------------------------------------------------+
+   | ``hotfix/<name>``  | Fixes to merge to both ``master`` and ``develop``                             |
+   |                    | (e.g. ``BUG``, ``TST``, ``DOC``)                                              |
+   +--------------------+-------------------------------------------------------------------------------+
+   | ``support/<name>`` | "What is the 'support' branch?"                                               |
+   |                    |                                                                               |
+   |                    | https://github.com/nvie/gitflow/wiki/FAQ                                      |
+   +--------------------+-------------------------------------------------------------------------------+
 
 Creating a new release with :ref:`Git` and :ref:`GitFlow`:
 
@@ -1212,21 +1288,21 @@ the defaults are as follows:
 .. table:: HubFlow Branch Names
    :class: table-striped table-responsive
 
-   +--------------------+-------------------------------------------------------------------------+
-   | **Branch Name**    | **Description**                                                         |
-   |                    | (and `Code Labels <https://westurner.org/wiki/workflow#code-labels>`__) |
-   +--------------------+-------------------------------------------------------------------------+
-   | ``master``         | Stable trunk (latest release)                                           |
-   +--------------------+-------------------------------------------------------------------------+
-   | ``develop``        | Development main line                                                   |
-   +--------------------+-------------------------------------------------------------------------+
-   | ``feature/<name>`` | New features for the next release (e.g. ``ENH``, ``PRF``)               |
-   +--------------------+-------------------------------------------------------------------------+
-   | ``release/<name>`` | In-progress release branches (e.g. ``RLS``)                             |
-   +--------------------+-------------------------------------------------------------------------+
-   | ``hotfix/<name>``  | Fixes to merge to both ``master`` and ``develop``                       |
-   |                    | (e.g. ``BUG``, ``TST``, ``DOC``)                                        |
-   +--------------------+-------------------------------------------------------------------------+
+   +--------------------+-------------------------------------------------------------------------------+
+   | **Branch Name**    | **Description**                                                               |
+   |                    | (and `Code Labels <https://westurner.github.io/wiki/workflow#code-labels>`__) |
+   +--------------------+-------------------------------------------------------------------------------+
+   | ``master``         | Stable trunk (latest release)                                                 |
+   +--------------------+-------------------------------------------------------------------------------+
+   | ``develop``        | Development main line                                                         |
+   +--------------------+-------------------------------------------------------------------------------+
+   | ``feature/<name>`` | New features for the next release (e.g. ``ENH``, ``PRF``)                     |
+   +--------------------+-------------------------------------------------------------------------------+
+   | ``release/<name>`` | In-progress release branches (e.g. ``RLS``)                                   |
+   +--------------------+-------------------------------------------------------------------------------+
+   | ``hotfix/<name>``  | Fixes to merge to both ``master`` and ``develop``                             |
+   |                    | (e.g. ``BUG``, ``TST``, ``DOC``)                                              |
+   +--------------------+-------------------------------------------------------------------------------+
 
 Creating a new release with :ref:`Git` and :ref:`HubFlow`:
 
@@ -1347,7 +1423,7 @@ Exemplar Projects
 
 * github.com/westurner/wiki: a GitHub Sphinx Wiki
 
-  | Home: https://westurner.org/wiki/
+  | Home: https://westurner.github.io/wiki/
   | Wiki: https://github.com/westurner/wiki/wiki
   | Src: https://github.com/westurner/wiki
   | Src: https://github.com/westurner/wiki.wiki.git
@@ -1373,8 +1449,8 @@ Exemplar Projects
 
 seeAlso:
 
-* https://wrdrd.com/docs/consulting/software-development#agile
-* https://wrdrd.com/docs/consulting/team-building#the-same-page
+* https://wrdrd.github.io/docs/consulting/software-development#agile
+* https://wrdrd.github.io/docs/consulting/team-building#the-same-page
 
 
 .. index:: cookiecutter
@@ -2047,6 +2123,7 @@ Python
 | Docs: https://en.wikiversity.org/wiki/Python
 | Docs: https://www.class-central.com/search?q=python
 | Docs: http://learnxinyminutes.com/docs/python/
+| Awesome: https://github.com/vinta/awesome-python
 
 Python is a free and open source
 dynamically-typed, :ref:`C`-based third-generation
@@ -2219,7 +2296,7 @@ Jupyter Docker Stacks
 See also:
 
 + :ref:`Docker`
-+ https://wrdrd.com/docs/consulting/data-science#reproducibility
++ https://wrdrd.github.io/docs/consulting/data-science#reproducibility
 
 
 .. index:: PyPy
@@ -2292,7 +2369,7 @@ See also: :ref:`Anaconda`
 
 awesome-python-testing
 ++++++++++++++++++++++++
-| Homepage: https://westurner.org/wiki/awesome-python-testing.html
+| Homepage: https://westurner.github.io/wiki/awesome-python-testing.html
 | Src: https://github.com/westurner/wiki/blob/master/awesome-python-testing.rest
 
 
@@ -4789,7 +4866,7 @@ ipython_nose is an extension for :ref:`IPython Notebook`
 for discovering and running test functions
 starting with ``test_``
 (and unittest.TestCase test classes with names containing ``Test``)
-with `Nose <https://westurner.org/wiki/awesome-python-testing#nose>`__.
+with `Nose <https://westurner.github.io/wiki/awesome-python-testing#nose>`__.
 
 * ipython_nose is not (yet?) uploaded to PyPI
 * to install ipython_nose from GitHub (with :ref:`Pip` and :ref:`Git`):
@@ -4802,11 +4879,11 @@ with `Nose <https://westurner.org/wiki/awesome-python-testing#nose>`__.
 See also:
 
 * TDD: Test Driven Development
-  https://wrdrd.com/docs/consulting/software-development#test-driven-development
+  https://wrdrd.github.io/docs/consulting/software-development#test-driven-development
 * **Refactoring** and **Reproducibility**
 
-  * https://wrdrd.com/docs/consulting/software-development#refactoring
-  * https://wrdrd.com/docs/consulting/data-science#reproducibility
+  * https://wrdrd.github.io/docs/consulting/software-development#refactoring
+  * https://wrdrd.github.io/docs/consulting/data-science#reproducibility
 
 
 .. index:: nosebook
@@ -4823,7 +4900,7 @@ with ``nose``.
 
 See also:
 
-* https://westurner.org/wiki/awesome-python-testing#nose
+* https://westurner.github.io/wiki/awesome-python-testing#nose
 
 
 .. index:: Jupyter
@@ -4988,7 +5065,7 @@ nbgrader is a solution for centrally receiving and grading :ref:`Jupyter noteboo
 See also:
 
 * :ref:`sagemathcloud` Course management
-* https://wrdrd.com/docs/consulting/education-technology#jupyter-and-tdd
+* https://wrdrd.github.io/docs/consulting/education-technology#jupyter-and-tdd
 
   * :ref:`jupyter and tdd`
 
@@ -5195,8 +5272,8 @@ configuration in files that are often prefixed with "dot"
 
   | Src: git https://github.com/westurner/dotfiles
   | Src: https://github.com/westurner/dotfiles/blob/master/etc/.bashrc
-  | Docs: https://westurner.org/dotfiles/
-  | Docs: https://westurner.org/dotfiles/usage#bash
+  | Docs: https://westurner.github.io/dotfiles/
+  | Docs: https://westurner.github.io/dotfiles/usage#bash
 
   Features
 
@@ -5221,7 +5298,7 @@ Dotvim is a conjunction / contraction of :ref:`Dotfiles` and :ref:`Vim`
 | Src: https://github.com/westurner/dotvim/blob/master/vimrc
 | Src: https://github.com/westurner/dotvim/blob/master/vimrc.full.bundles.vimrc
 | Src: https://github.com/westurner/dotvim/blob/master/vimrc.tinyvim.bundles.vimrc
-| Docs: https://westurner.org/dotfiles/usage#vim
+| Docs: https://westurner.github.io/dotfiles/usage#vim
 
 
 
@@ -5231,8 +5308,8 @@ Dotvim is a conjunction / contraction of :ref:`Dotfiles` and :ref:`Vim`
 Venv
 ~~~~~
 
-| Docs: https://westurner.org/dotfiles/venv
-| Docs: https://westurner.org/dotfiles/dotfiles.venv
+| Docs: https://westurner.github.io/dotfiles/venv
+| Docs: https://westurner.github.io/dotfiles/dotfiles.venv
 | Src: https://github.com/westurner/dotfiles/blob/develop/src/dotfiles/venv/
 | Src: https://github.com/westurner/dotfiles/blob/develop/etc/bash/10-bashrc.venv.sh
 
@@ -6570,7 +6647,7 @@ modules and features bundled in.
 
 Documentation Tools
 =====================
-| Docs: https://wrdrd.com/docs/consulting/education-technology#publishing
+| Docs: https://wrdrd.github.io/docs/consulting/education-technology#publishing
 
 
 .. index:: Docutils
@@ -6645,9 +6722,9 @@ or from the local filesystem.
   Git or filesystem mtimes.
 * pgs does something like :ref:`Nginx` ``try_files $.html``
 
-  * https://westurner.org/tools/index
+  * https://westurner.github.io/tools/index
 
-    https://westurner.org/tools/index.html
+    https://westurner.github.io/tools/index.html
 
     * :ref:`Sphinx` can also generate links without ``.html`` extensions
       with the ``html_link_suffix`` ``conf.py`` configuration setting.
@@ -6736,7 +6813,7 @@ so, for example,
 
     https://github.com/westurner/tools/blob/gh-pages/index.html
 
-    https://westurner.org/tools/
+    https://westurner.github.io/tools/
 
 
     * RawGit:
@@ -7151,8 +7228,8 @@ for system maintenance.
 
 Standards
 ============
-| Docs: https://wrdrd.com/docs/consulting/knowledge-engineering#web-standards
-| Docs: https://wrdrd.com/docs/consulting/knowledge-engineering#semantic-web-standards
+| Docs: https://wrdrd.github.io/docs/consulting/knowledge-engineering#web-standards
+| Docs: https://wrdrd.github.io/docs/consulting/knowledge-engineering#semantic-web-standards
 
 
 .. index:: Cascading Style Sheets
@@ -7162,7 +7239,7 @@ Standards
 CSS
 ~~~~~~~~
 | Wikipedia: https://en.wikipedia.org/wiki/Cascading_Style_Sheets
-| Docs: https://wrdrd.com/docs/consulting/knowledge-engineering#css
+| Docs: https://wrdrd.github.io/docs/consulting/knowledge-engineering#css
 
 CSS (*Cascading Style Sheets*) define the presentational
 aspects of :ref:`HTML-` and a number of mobile and desktop
@@ -7192,7 +7269,7 @@ system file naming structure.
 * Likewise, :ref:`virtualenv` and :ref:`Venv` implement
   a filesystem hierarchy:
 
-  | Docs: https://westurner.org/dotfiles/venv#venv-paths
+  | Docs: https://westurner.github.io/dotfiles/venv#venv-paths
 
 * :ref:`Docker` (and many LiveCDs) layer filesystem hierarchies
   with e.g. UnionFS, AUFS, and BTRFS filesystems.
@@ -7204,8 +7281,8 @@ system file naming structure.
 HTTP
 ~~~~~~
 | Wikipedia: https://en.wikipedia.org/wiki/HTTP
-| Docs: https://wrdrd.com/docs/consulting/knowledge-engineering#http
-| Docs: https://wrdrd.com/docs/consulting/knowledge-engineering#http2
+| Docs: https://wrdrd.github.io/docs/consulting/knowledge-engineering#http
+| Docs: https://wrdrd.github.io/docs/consulting/knowledge-engineering#http2
 
 
 .. index:: HTTPS
@@ -7214,7 +7291,7 @@ HTTP
 HTTPS
 ++++++
 | Wikipedia: https://en.wikipedia.org/wiki/HTTPS
-| Docs: https://wrdrd.com/docs/consulting/knowledge-engineering#https
+| Docs: https://wrdrd.github.io/docs/consulting/knowledge-engineering#https
 
 
 .. index:: HTML
@@ -7223,7 +7300,7 @@ HTTPS
 HTML
 ~~~~~~
 | Wikipedia: https://en.wikipedia.org/wiki/HTML
-| Docs: https://wrdrd.com/docs/consulting/knowledge-engineering#html5
+| Docs: https://wrdrd.github.io/docs/consulting/knowledge-engineering#html5
 
 
 .. index:: JSON
@@ -7257,7 +7334,7 @@ for parsing and indenting ("prettifying") JSON from the commandline ::
     cat example.json | python -m json.tool
 
 * See also:
-  https://wrdrd.com/docs/consulting/knowledge-engineering#json
+  https://wrdrd.github.io/docs/consulting/knowledge-engineering#json
 
 
 .. index:: JSONLD
@@ -7269,7 +7346,7 @@ JSON-LD
 | Wikipedia: https://en.wikipedia.org/wiki/JSON-LD
 | Homepage: http://json-ld.org
 | Docs: http://json-ld.org/playground/
-| Docs: https://wrdrd.com/docs/consulting/knowledge-engineering#json-ld
+| Docs: https://wrdrd.github.io/docs/consulting/knowledge-engineering#json-ld
 
 JSON-LD is a web standard for **Linked Data** in :ref:`JSON <json->`.
 
@@ -7330,7 +7407,7 @@ MessagePack (*msgpack*) is a data interchange format
 with implementations in many languages.
 
 * :ref:`MsgPack` is a `Distributed Computing Protocol`
-  https://wrdrd.com/docs/consulting/knowledge-engineering#distributed-computing-protocols
+  https://wrdrd.github.io/docs/consulting/knowledge-engineering#distributed-computing-protocols
 * :ref:`Salt` serializes messages with :ref:`MsgPack` by default.
 
 
