@@ -3402,6 +3402,8 @@ Ansible
 | Wikipedia: `<https://en.wikipedia.org/wiki/Ansible_(software)>`__
 | Homepage: http://ansible.com/
 | Src: https://github.com/ansible/ansible
+| Docs: https://docs.ansible.com/
+| Learnxinyminutes: https://learnxinyminutes.com/docs/ansible/
 
 Ansible is a :ref:`Configuration Management` tool
 written in :ref:`Python`
