@@ -7425,7 +7425,7 @@ Vim
 | Wikipedia: `<https://en.wikipedia.org/wiki/Vim_(text_editor)>`__
 | Homepage: http://www.vim.org/
 | Docs: http://www.vim.org/docs.php
-| Src: hg https://vim.googlecode.com/hg/
+| Src: git https://github.com/vim/vim
 
 
 * https://github.com/scrooloose/nerdtree
