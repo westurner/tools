@@ -6193,12 +6193,17 @@ Ghostery
 
 HTTPS Everywhere
 +++++++++++++++++
+| Wikipedia: https://en.wikipedia.org/wiki/HTTPS_Everywhere
 | Homepage: https://www.eff.org/https-everywhere
 | Src: https://github.com/EFForg/https-everywhere
 | ChromeExt: https://chrome.google.com/webstore/detail/gcbommkclmclpchllfjekcdonpmejbdp
 | FirefoxXPI: https://www.eff.org/files/https-everywhere-latest.xpi
 | FirefoxAndroidXPI: https://www.eff.org/files/https-everywhere-android.xpi
 | Twitter: https://twitter.com/HTTPSEverywhere
+
+HTTPS Everywhere is a browser extension that forces the browser
+to only connect over HTTPS to sites listed in its database.
+
 
 .. index:: uBlock
 .. _ublock:
