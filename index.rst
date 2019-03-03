@@ -3405,12 +3405,13 @@ Ansible
 | Homepage: http://ansible.com/
 | Src: https://github.com/ansible/ansible
 | Docs: https://docs.ansible.com/
+| Docs: https://docs.ansible.com/ansible/latest/
 | Learnxinyminutes: https://learnxinyminutes.com/docs/ansible/
 
 Ansible is a :ref:`Configuration Management` tool
 written in :ref:`Python`
 which runs idempotent Ansible Playbooks
-written in :ref:`YAML`
+written in :ref:`YAML` markup with :ref:`Jinja2` variables
 for managing
 one or more physical and virtual machines running various operating systems
 over SSH.
