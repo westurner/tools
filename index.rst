@@ -7330,7 +7330,7 @@ JSON
 
 
 JSON is an object representation in :ref:`Javascript` syntax
-which is now supported by libraries for many language.
+which is now supported by libraries for many languages.
 
 A list of objects with ``key`` and ``value`` attributes in JSON syntax:
 
