@@ -267,6 +267,7 @@ LOCALCSS=$(STATIC)/css/local.css
 localjs:
 	echo '' > $(LOCALJS)
 	cat $(STATIC)/js/ga.js >> $(LOCALJS)
+	cat $(STATIC)/js/fix-tables.js >> $(LOCALJS)
 	cat $(STATIC)/js/newtab.js >> $(LOCALJS)
 	cat $(STATIC)/js/sidenav-affix.js >> $(LOCALJS)
 	cat $(STATIC)/js/jquery.scrollTo.js >> $(LOCALJS)

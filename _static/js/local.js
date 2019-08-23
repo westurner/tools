@@ -16,6 +16,9 @@ if (document.location.hostname in keymap) {
 }
 
 
+// Add table-responsive around all tables
+$('table.docutils').wrap('<div class="table-responsive"></div>');
+
 $(document).ready(function() {
     $("a[href^='http']").attr('target','_blank');
 });
