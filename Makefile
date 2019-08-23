@@ -335,6 +335,7 @@ pull:
 	# git pull from origin master, wiki master
 	git pull origin master
 	git pull wiki master
+	git fetch origin gh-pages
 
 push:
 	# git push to origin master, wiki master, origin gh-pages
