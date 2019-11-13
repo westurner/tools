@@ -7395,14 +7395,15 @@ HTML
 .. _json-:
 
 JSON
-~~~~~~~~~~~~~~~
+~~~~~
 | Wikipedia: https://en.wikipedia.org/wiki/JSON
-| Homepage: http://json.org/
-| Docs: http://learnxinyminutes.com/docs/json/
+| Homepage: https://json.org/
+| Spec: https://www.ecma-international.org/publications/standards/Ecma-404.htm
+| Docs: https://learnxinyminutes.com/docs/json/
 
 
 JSON is an object representation in :ref:`Javascript` syntax
-which is now supported by libraries for many languages.
+which is now supported by libraries written in many languages.
 
 A list of objects with ``key`` and ``value`` attributes in JSON syntax:
 
@@ -7411,7 +7412,7 @@ A list of objects with ``key`` and ``value`` attributes in JSON syntax:
     [
     { "key": "language", "value": "Javascript" },
     { "key": "version", "value": 1 },
-    { "key": "example", "value": true },
+    { "key": "example", "value": true }
     ]
 
 Machine-generated JSON is often not very readable, because it doesn't
@@ -7423,6 +7424,52 @@ for parsing and indenting ("prettifying") JSON from the commandline ::
 
 * See also:
   https://wrdrd.github.io/docs/consulting/knowledge-engineering#json
+
+
+.. index:: JSON5
+.. _json5:
+
+JSON5
+~~~~~~
+| Wikipedia: 
+| Homepage: https://json5.org/
+| Src: https://github.com/json5/json5
+| Speci: https://spec.json5.org/
+
+JSON5 is JSON extended with support for a number of additional features:
+comments, trailing commas, IEEE 754 +/- infinity and NaN, hexadecimal
+numbers, leading and trailing decimal points, single-quoted strings,
+multiline strings, and escaped characters.
+
+- Regular JSON libraries do not support JSON5.
+
+
+.. code:: javascript
+
+    {
+    // comment
+    key:   [0, +1, 2., .3, NaN, +inf, -inf, 0xF, 'thing1', "thing2"],
+    "str": "this is a \
+    multi-line string", // trailing comma
+    }
+
+
+.. index:: JSON-lines
+.. _json-lines:
+
+JSON-lines
+~~~~~~~~~~~
+| Homepage: http://jsonlines.org/
+
+JSON-lines (newline-delimited JSON) is an informal spec
+for line-based processing of JSON e.g. for streaming records
+and unix pipes.
+
+
+.. code:: javascript
+
+    {"key": "red", "value": 1}
+    {"key": "green", "value": 2}
 
 
 .. index:: JSONLD
