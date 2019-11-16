@@ -307,27 +307,27 @@ conda-forge
 * https://conda-forge.github.io/#add_recipe
 
   * A. fork: https://github.com/conda-forge/staged-recipes
-  
+
     * meta.yaml https://github.com/conda-forge/staged-recipes/blob/master/recipes/example/meta.yaml
-    
+
   * B. conda-smithy
-    
+
   * meta.yaml
-  
+
     * Docs: numpy x.x: https://conda-forge.github.io/docs/meta.html#building-against-numpy
-    
+
   * circle.yml
-  
+
     * https://github.com/conda-forge/staged-recipes/blob/master/circle.yml
-    
+
   * .travis.yml
-  
+
     * https://github.com/conda-forge/staged-recipes/blob/master/.travis.yml
-    
+
   * appveyor.yml
-  
+
     * https://github.com/conda-forge/staged-recipes/blob/master/appveyor.yml
-    
+
   * conda-forge.yml
   * run_docker_build.sh
     https://github.com/conda-forge/staged-recipes/blob/master/scripts/run_docker_build.sh
@@ -355,8 +355,8 @@ conda-forge
     cat ./scripts/run_docker_build.sh
     ./scripts/run_docker_build.sh
     ./ci_support/run_docker_build.sh
-    
-    
+
+
 .. index:: conda-smithy
 .. _conda-smithy:
 
@@ -2342,7 +2342,7 @@ Jupyter Docker Stacks
 * :ref:`Jupyter` and :ref:`Scipystack` :ref:`Docker` containers:
 
   * https://hub.docker.com/r/jupyter/datascience-notebook/
-  
+
     * https://github.com/jupyter/docker-stacks/tree/master/datascience-notebook#docker-options
     * :ref:`conda`
 
@@ -3953,7 +3953,7 @@ libcontainer is a library built by :ref:`Docker` to replace :ref:`LXC`.
 
   -- https://github.com/opencontainers/runc/tree/master/libcontainer
 
-- libcontainer is now developed as part of 
+- libcontainer is now developed as part of
   :ref:`OCI` :ref:`runC`.
 
 
@@ -3970,7 +3970,7 @@ Open Container Initiative
 | Src: https://github.com/opencontainers
 | Twitter: https://twitter.com/oci_org
 
-The Open Container Initiative (*OCI*) is a Linux Foundation 
+The Open Container Initiative (*OCI*) is a Linux Foundation
 collaborative project dedicated to developing a working, portable
 software container specification.
 
@@ -3983,7 +3983,7 @@ runC
 | Homepage: https://www.opencontainers.org/
 | Src: https://github.com/opencontainers/runc
 
-runC is a container abstraction 
+runC is a container abstraction
 
   runc is a CLI tool for spawning and running containers according to
   the :ref:`OCI` specification.
@@ -4031,13 +4031,13 @@ to partition process workloads across one or more host systems.
         implementation.
 
     Docker Machine
-        Docker Machine is the container management application 
+        Docker Machine is the container management application
         which implements the :term:`Docker API`.
 
     Docker Swarm
         Docker Swarm is a cluster management system for Docker
         containers hosted on one or more :term:`Docker Machines <Docker
-        Machine>` 
+        Machine>`
 
     Docker Universal Control Plane
         Docker Universal Control Plane is an enterprise-grade cluster
@@ -5038,7 +5038,7 @@ Jupyter Notebook
    implement best practices like process isolation and privilege separation
    with e.g. :ref:`Docker` and/or :ref:`Jupyter` Hub.
 
-:ref:`JupyterLab` 
+:ref:`JupyterLab`
 
 
 .. index:: JupyterLab
@@ -5053,7 +5053,7 @@ JupyterLab
 | Docs: https://jupyterlab.readthedocs.io/en/stable/user/extensions.html
 | Docs: https://jupyterlab.readthedocs.io/en/stable/developer/extension_dev.html
 
-JupyterLab is a web-based tabbed :ref:`IDE` with integrated support for 
+JupyterLab is a web-based tabbed :ref:`IDE` with integrated support for
 :ref:`Jupyter Notebook`, terminals, text editing, and a new extension
 API.
 
@@ -5140,10 +5140,10 @@ for slide presentations served from an HTML file.
      for a Jupyter reveal.js presentation*.
 
      Alternatives to presenting notebooks as reveal.js slides:
-     
+
      - Increase the browser font size (Jupyter Notebook)
      - "View" > "Presentation Mode" (JupyterLab)
-     - Select a keyboard shortcut set 
+     - Select a keyboard shortcut set
        use the "Select Cell Below" / "Select Cell Above"
        keyboard shortcuts to highlight cells and scroll them into view
 
@@ -5240,7 +5240,7 @@ versions of Jupyter notebooks from HTTP URLs.
 
 - When you enter a URL, GitHub ``username``,
   GitHub ``username/repo``, or Gist ID
-  into the text box at 
+  into the text box at
   https://nbviewer.jupyter.org/ and click 'Go!' (or press Enter),
   nbviewer nbconverts the notebook to HTML or shows a file browser
   and branch/tag selector
@@ -5397,7 +5397,7 @@ SageMathCloud
 * Linux Terminal
 * :ref:`Sage Math`
 * CodeMirror
-* Login with: 
+* Login with:
 
 
 .. index:: Wakari
@@ -7140,7 +7140,7 @@ Clonezilla
 | DistroWatch: https://distrowatch.com/table.php?distribution=clonezilla
 | Homepage: https://clonezilla.org/
 | Src: git https://github.com/stevenshiau/clonezilla
-| Docs: https://clonezilla.org/clonezilla-live.php 
+| Docs: https://clonezilla.org/clonezilla-live.php
 | Docs: https://clonezilla.org/clonezilla-SE/
 | Docs: https://clonezilla.org/related-links/
 
@@ -7513,7 +7513,7 @@ for parsing and indenting ("prettifying") JSON from the commandline ::
 
 JSON5
 ~~~~~~
-| Wikipedia: 
+| Wikipedia:
 | Homepage: https://json5.org/
 | Src: https://github.com/json5/json5
 | Speci: https://spec.json5.org/
@@ -7739,7 +7739,7 @@ GNU Emacs is an open source text editor
 written in Emacs :ref:`Lisp` and :ref:`C`
 that's available for :ref:`Linux`, :ref:`OSX`, and :ref:`Windows`.
 
-- Emacs pinky is allegedly a result of the default emacs 
+- Emacs pinky is allegedly a result of the default emacs
   ``Control`` key keybindings
   https://en.wikipedia.org/wiki/Emacs#Emacs_pinky
 - :ref:`Spacemacs` uses the ``Space`` key instead of
@@ -7816,7 +7816,7 @@ VSCode
 | Homepage: https://code.visualstudio.com/
 | Src: https://github.com/Microsoft/vscode
 | Download: https://code.visualstudio.com/Download
-| ChocolateyPkg: https://chocolatey.org/packages/vscode 
+| ChocolateyPkg: https://chocolatey.org/packages/vscode
 | Docs: https://code.visualstudio.com/docs
 | Docs: https://code.visualstudio.com/docs/getstarted/tips-and-tricks
 | Docs: https://code.visualstudio.com/docs/getstarted/keybindings
@@ -7832,7 +7832,7 @@ that's available for :ref:`Windows`, :ref:`Mac`, and :ref:`Linux`.
 * There is an official :ref:`Vim` extension for :ref:`VSCode`.
 * In VSCode, ``Ctrl+Space`` opens the
   context-sensitive Intellisense Code Completion
-* In VScode, ``Ctrl-p`` opens the quick open dialogue 
+* In VScode, ``Ctrl-p`` opens the quick open dialogue
 * IN VScode, ``Ctrl-Shift-p`` opens the command palette
   (which lists "all available commands based on your current context")
 
@@ -7873,7 +7873,7 @@ that's available on very many platforms.
 * GVim reads a few vimrc configuration files in sequence (``:help gvimrc``)
 * MacVim is Vim for :ref:`OSX`
 * One way to write changes and exit vim: ``:wq!``
-  (Press ``<esc>``, Type ``:wq!``, Press Enter) 
+  (Press ``<esc>``, Type ``:wq!``, Press Enter)
 * There are many plugins for vim.
 * NERDTree is an example of a vim plugin:
   https://github.com/scrooloose/nerdtree (``:help nerdtree``)
