@@ -55,16 +55,10 @@ Anaconda
 ~~~~~~~~~~
 | Wikipedia: `<https://en.wikipedia.org/wiki/Anaconda_(Python_distribution)>`__
 | Homepage: https://store.continuum.io/cshop/anaconda/
-| Docs: http://docs.continuum.io/anaconda/
-| Docs: http://docs.continuum.io/anaconda/pkg-docs.html
+| Docs: https://docs.continuum.io/anaconda/
 
 Anaconda is a maintained distribution of :ref:`Conda`
 packages for many languages; especially :ref:`Python`.
-
-* :ref:`Anaconda` maintains a working set of :ref:`Conda` packages
-  for Python 2.6, 2.7, 3.3, and 3.4:
-  http://docs.continuum.io/anaconda/pkg-docs.html
-
 
 .. note:: `<https://en.wikipedia.org/wiki/Anaconda_(installer)>`__ (1999)
    is the installer for :ref:`RPM`-based :ref:`Linux` distributions; which is
@@ -4140,6 +4134,22 @@ called Pods.
 - Google donated Kubernetes to the :ref:`CNCF`.
 
 
+.. index:: k3s
+.. _k3s:
+
+k3s
+~~~~
+| Homepage: https://k3s.io/
+| Src: https://github.com/rancher/k3s
+| Docs: https://rancher.com/docs/k3s/latest/en/
+
+k3s is a lightweight :ref:`Kubernetes` distribution
+which runs on x86-64, ARM6, ARM7; only requires 512Mb of RAM;
+and is distributed as a single :ref:`Go` binary.
+
+- You've heard of k8s? This is k8s - 5.
+
+
 .. index:: Kubernetes-Mesos
 .. _kubernetes-mesos:
 
@@ -4979,17 +4989,10 @@ Jupyter
 | Wikipedia: https://en.wikipedia.org/wiki/IPython#Project_Jupyter
 | Homepage: http://jupyter.org/
 | Src: https://github.com/jupyter/
-| Src: git https://github.com/jupyter/notebook
-| Src: git https://github.com/jupyter/jupyterhub
-| Src: https://hub.docker.com/r/jupyter/tmpnb/
-| DockerHub: https://hub.docker.com/repos/ipython/
 | DockerHub: https://hub.docker.com/repos/jupyter/
-| Docs: https://github.com/ipython/ipython/wiki/Install:-Docker
-| Docs: https://github.com/ipython/ipython/wiki/IPython-kernels-for-other-languages
-| Docs: https://github.com/jupyter/jupyter/blob/master/docs/source/index.rst
-| Docs: https://github.com/jupyter/jupyterhub/wiki
-| Docs: https://github.com/jupyter/jupyterhub/wiki/Authenticators
-| Docs: https://github.com/jupyter/jupyterhub/wiki/Spawners
+| Docs: https://jupyter.readthedocs.io/en/latest/
+
+
 
 Project Jupyter expands upon
 components like :ref:`IPython` and :ref:`IPython Notebook`
@@ -5019,6 +5022,8 @@ Jupyter Notebook
 +++++++++++++++++++
 | Wikipedia: https://en.wikipedia.org/wiki/Jupyter#Notebook
 | Src: https://github.com/jupyter/notebook
+| CondaPkg: ``notebook``
+| Docs: https://jupyter-notebook.readthedocs.io/en/stable/
 
 :ref:`Jupyter` Notebook is the latest :ref:`IPython Notebook`.
 
@@ -5033,17 +5038,56 @@ Jupyter Notebook
    implement best practices like process isolation and privilege separation
    with e.g. :ref:`Docker` and/or :ref:`Jupyter` Hub.
 
+:ref:`JupyterLab` 
 
-.. index:: Jupyter Drive
-.. _jupyter drive:
 
-Jupyter Drive
-++++++++++++++++++++++++++
-| Src: git https://github.com/jupyter/jupyter-drive
+.. index:: JupyterLab
+.. _jupyterlab:
 
-Jupyter Drive adds support to :ref:`Jupyter Notebook`
-for reading and writing :ref:`nbformat` notebook ``.ipynb``
-files to and from Google Drive.
+JupyterLab
++++++++++++++
+| Wikipedia: https://en.wikipedia.org/wiki/Project_Jupyter#JupyterLab
+| Src: https://github.com/jupyterlab/jupyterlab
+| CondaPkg: ``jupyterlab``
+| Docs: https://jupyterlab.readthedocs.io/en/stable/
+| Docs: https://jupyterlab.readthedocs.io/en/stable/user/extensions.html
+| Docs: https://jupyterlab.readthedocs.io/en/stable/developer/extension_dev.html
+
+JupyterLab is a web-based tabbed :ref:`IDE` with integrated support for 
+:ref:`Jupyter Notebook`, terminals, text editing, and a new extension
+API.
+
+- Installing JupyterLab also installs Jupyter Notebook.
+- A few UI differences between JupyterLab and Jupyter Notebook:
+
+  - JupyterLab has tabbed editing: you can open files, notebooks,
+    and terminals in tabs
+  - JupyterLab has a sidebar with a file selector pane
+
+
+.. index:: JupyterHub
+.. _jupyterhub:
+
+JupyterHub
+++++++++++++
+| Src: https://github.com/jupyter/jupyterhub
+| Docs: https://jupyterhub.readthedocs.io/en/latest/
+| Docs: https://github.com/jupyter/jupyterhub/wiki
+| Docs: https://github.com/jupyter/jupyterhub/wiki/Authenticators
+| Docs: https://github.com/jupyter/jupyterhub/wiki/Spawners
+
+JupyterHub makes it easy to serve :ref:`Jupyter Notebook`
+and/or :ref:`Jupyter Lab` for multiple users on one or more servers.
+
+- JupyterHub spawns individual
+  Jupyter Notebook / JupyterLab server instances
+  for logged-in users.
+- JupyterHub enables users to log-in with Authenticator backends:
+  system users, LDAP, SSO, OAuth (e.g. Google accounts)
+- If so configured, JupyterHub can launch additional servers
+  to serve one or more Notebook/Lab :ref:`Docker` containers
+  and then shut those down when they're idle
+  or, for example, when a course session is complete.
 
 
 .. index:: nbconvert
@@ -5051,42 +5095,83 @@ files to and from Google Drive.
 
 nbconvert
 +++++++++++
-| Docs: http://ipython.org/ipython-doc/stable/notebook/nbconvert.html
-|
+| Src: https://github.com/jupyter/nbconvert
+| Docs: https://nbconvert.readthedocs.io/en/latest/
 
 nbconvert is the code that converts (transforms) an ``.ipynb`` notebook
 (:ref:`nbformat` :ref:`JSON <json->`) file
-( into an output representation (e.g. HTML,
-slides (reveal.js), LaTeX, PDF, ePub, Mobi).
+into an output representation (e.g. :ref:`HTML`,
+HTML slides (:ref:`reveal.js`), :ref:`LaTeX`, PDF, ePub, Mobi).
 
-* nbconvert is included with :ref:`IPython`
-* nbconvert is part of :ref:`Project Jupyter<jupyter>`
+* nbconvert is included with :ref:`Jupyter Notebook` and
+  :ref:`JupyterLab`
 
   .. code:: bash
 
     pip install nbconvert
     # pip install -e git+https://github.com/jupyter/nbconvert@master#egg=nbconvert
 
-    ipython nbconvert --to html mynotebook.ipynb
     jupyter nbconvert --to html mynotebook.ipynb
 
 
-* reveal.js is an HTML presentation framework
-  for slides in a 1D or 2D arrangement.
+.. index:: reveal.js
+.. _reveal.js:
 
-  | https://github.com/hakimel/reveal.js
+----------
+reveal.js
+----------
+| Src: https://github.com/hakimel/reveal.js
 
-  * Presentation content that doesn't fit on the slide is hidden
-    and unscrollable (*only put a slide worth of data in each cell
-    for a Jupyter reveal.js presentation*).
+reveal.js is a :ref:`Javascript` and :ref:`HTML` library
+for slide presentations served from an HTML file.
 
-    .. code:: bash
+- Reveal.js slides can be in a 1-dimensional or a 2-dimensional arrangement.
+- You can generate reveal.js slides from Jupyter notebooks in two ways:
+  with ``nbconvert --to slides`` or with the GUI:
+  "File" > "Export Notebok As..." > "Export Notebook to reveal.js
+  slides"
 
-        jupyter nbconvert --to slides mynotebook.ipynb
+  .. code:: bash
 
-* RISE does live reveal.js notebook presentations
+      jupyter nbconvert --to slides mynotebook.ipynb
 
-  https://github.com/damianavila/RISE
+  .. note:: Presentation content that doesn't fit on a slide is hidden
+     and unscrollable: *only put a slide worth of data in each cell
+     for a Jupyter reveal.js presentation*.
+
+     Alternatives to presenting notebooks as reveal.js slides:
+     
+     - Increase the browser font size (Jupyter Notebook)
+     - "View" > "Presentation Mode" (JupyterLab)
+     - Select a keyboard shortcut set 
+       use the "Select Cell Below" / "Select Cell Above"
+       keyboard shortcuts to highlight cells and scroll them into view
+
+       - Press "<Escape>"
+       - Press "j" to "Select Cell Below"
+       - Press "k" to "Select Cell Above"
+
+- The :ref:`RISE` extension also generates reveal.js slides.
+
+
+.. index:: RISE
+.. _rise:
+
+------
+RISE
+------
+| Src: https://github.com/damianavila/RISE
+| Docs: https://rise.readthedocs.io/en/latest/
+
+RISE is a :ref:`Jupyter Notebook` and :ref:`JupyterLab` extension
+that generates live :ref:`reveal.js` presentations from Jupyter
+notebooks.
+
+- Install the RISE extension
+- Click the RISE button to generate a *live* :ref:`reveal.js`
+  slide presentation wherein you can execute cells
+  on the slides with "Ctrl-Enter" and "Shift-Enter"
+  just like you can in the Notebook interface.
 
 
 .. index:: nbformat
@@ -5094,7 +5179,7 @@ slides (reveal.js), LaTeX, PDF, ePub, Mobi).
 
 nbformat
 ++++++++++
-| Docs: http://ipython.org/ipython-doc/dev/notebook/nbformat.html
+| Src: https://github.com/jupyter/nbformat
 | Docs: https://nbformat.readthedocs.io/en/latest/
 | Docs: https://nbformat.readthedocs.io/en/latest/format_description.html#backward-compatible-changes
 
@@ -5109,8 +5194,8 @@ new version on the next save.
    code for languages other than :ref:`Python`.
 
 * nbformat does not specify any schema for the user-supplied
-  metadata dict (TODO) that can be edited
-  so, JSON that conforms to an externally
+  metadata dict (TODO: :ref:`nbmeta`),
+  so JSON that conforms to an externally
   managed :ref:`JSON-LD <json-ld->` ``@context``
   would work.
 
@@ -5120,18 +5205,21 @@ new version on the next save.
 
 nbgrader
 ++++++++
-| Src: git https://github.com/jupyter/nbgrader
+| Src: https://github.com/jupyter/nbgrader
 | Docs: https://nbgrader.readthedocs.io/en/stable/
 | Docs: https://nbgrader.readthedocs.io/en/stable/user_guide/
 | Docs: https://nbgrader.readthedocs.io/en/latest/
 | Docs: https://nbgrader.readthedocs.io/en/latest/user_guide/
 | Docs: https://nbgrader.readthedocs.io/en/latest/command_line_tools/
 
-nbgrader is a solution for centrally receiving and grading :ref:`Jupyter notebooks <jupyter notebook>`.
+nbgrader is a solution for centrally receiving and grading :ref:`Jupyter
+notebooks <jupyter notebook>`.
+
+- You mark notebook cells as TODO
 
 See also:
 
-* :ref:`sagemathcloud` Course management
+* :ref:`CoCalc` Course management
 * https://wrdrd.github.io/docs/consulting/education-technology#jupyter-and-tdd
 
   * :ref:`jupyter and tdd`
@@ -5142,15 +5230,29 @@ See also:
 
 nbviewer
 +++++++++++
-| Homepage: http://nbviewer.ipython.org
+| Homepage: https://nbviewer.jupyter.org
 | Src: git https://github.com/jupyter/nbviewer
 | Dockerfile: https://github.com/jupyter/nbviewer/blob/master/Dockerfile
 
-:ref:`Jupyter Notebook` Viewer (``nbviewer``)
+(``nbviewer``)
 is an application for serving read-only
-versions of ``.ipynb`` files which have HTTP URLs.
+versions of Jupyter notebooks from HTTP URLs.
 
-GitHub now also renders static ``.ipynb`` files, CSV, SVG, and PDF.
+- When you enter a URL, GitHub ``username``,
+  GitHub ``username/repo``, or Gist ID
+  into the text box at 
+  https://nbviewer.jupyter.org/ and click 'Go!' (or press Enter),
+  nbviewer nbconverts the notebook to HTML or shows a file browser
+  and branch/tag selector
+  for the git repo.
+- You do not need to look up the raw GitHub URL for the notebook,
+  because nbviewer automatically rewrites the GitHub /blob/ file URL
+  to a raw.githubusercontent.com URL.
+
+- GitHub now also renders static ``.ipynb`` files, CSV, SVG, and PDF.
+  However, GitHub does not execute any JS in the notebook due
+  to security concerns (XSS)
+- GitLab renders Jupyter notebooks with JS.
 
 
 .. index:: runipy
@@ -5245,25 +5347,11 @@ jupyter_contrib_nbextensions
 ++++++++++++++++++++++++++++++
 | Src: https://github.com/ipython-contrib/jupyter_contrib_nbextensions
 | Docs: https://github.com/ipython-contrib/jupyter_contrib_nbextensions#1-install-the-python-package
+| CondaPkg: ``jupyter_contrib_nbextensions``
 
 - https://github.com/ipython-contrib/jupyter_contrib_nbextensions#pip
 - https://github.com/ipython-contrib/jupyter_contrib_nbextensions#conda
 
-
-
-.. index:: RISE
-.. index:: Jupyter RISE
-.. _rise:
-
-RISE
-+++++++++++++
-| Src: https://github.com/damianavila/RISE
-
-    Reveal.js - Jupyter/IPython Slideshow Extension,
-    also known as ``live_reveal``
-
-* :ref:`Jupyter Notebook`
-* Interactive presentations with live source code evaluation
 
 
 .. index:: NBPresent
