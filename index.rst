@@ -793,7 +793,7 @@ Setuptools
 ++++++++++++
 | Wikipedia: https://en.wikipedia.org/wiki/Setuptools
 | Docs: https://pythonhosted.org/setuptools/
-| Src: hg https://bitbucket.org/pypa/setuptools
+| Src: https://github.com/pypa/setuptools
 | PyPI: https://pypi.python.org/pypi/setuptools
 
 
@@ -953,10 +953,11 @@ PyPI
 | Docs: https://wiki.python.org/moin/CheeseShop
 | Docs: https://wiki.python.org/moin/CheeseShopDev
 | Homepage: https://pypi.python.org/pypi
-| Src: https://bitbucket.org/pypa/pypi
+| Src: https://github.com/pypa/pypi-legacy
 
 
-PyPI is the Python Package Index.
+PyPI-legacy is the original Python Package Index.
+PyPI is now powered by :ref:`Warehouse`
 
 
 .. index:: Warehouse
@@ -980,8 +981,8 @@ All packages uploaded to :ref:`PyPI` are also available from Warehouse.
 Devpi
 ++++++++
 | Homepage: https://doc.devpi.net/
-| Src: hg https://bitbucket.org/hpk42/devpi
-| Issues: https://bitbucket.org/hpk42/devpi/issues
+| Src: https://github.com/devpi/devpi
+| Issues: https://github.com/devpi/devpiissues
 | PyPI: https://pypi.python.org/pypi/devpi-server
 | PyPI: https://pypi.python.org/pypi/devpi-web
 | PyPI: https://pypi.python.org/pypi/devpi-client
@@ -999,7 +1000,7 @@ Wheel
 ++++++
 | Docs: https://legacy.python.org/dev/peps/pep-0427/
 | Docs: https://wheel.readthedocs.io/en/latest/
-| Src: hg https://bitbucket.org/pypa/wheel/
+| Src: https://github.com/pypa/wheel
 | PyPI: https://pypi.python.org/pypi/wheel
 
 
@@ -2435,7 +2436,7 @@ Tox
 ++++++++++++++
 | Homepage: https://testrun.org/tox/
 | Docs: https://tox.readthedocs.io/en/latest/
-| Src: hg https://bitbucket.org/hpk42/tox
+| Src: https://github.com/tox-dev/tox
 | Pypi: https://pypi.python.org/pypi/tox
 
 
