@@ -6,7 +6,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- OpenGraph metadata: ogp.me -->
     <meta property="og:title" content="Tools" />
@@ -40,8 +40,9 @@
 
 <link rel="stylesheet" href="_static/css/font-awesome.min.css">
 
-<link rel="stylesheet" href="_static/css/basicstrap.css" type="text/css" />
+<link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
 <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+<link rel="stylesheet" href="_static/css/local.css" type="text/css" />
 <link rel="stylesheet" href="_static/css/local.css" type="text/css" />
     
 <script type="text/javascript">
@@ -57,6 +58,7 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/js/local.js"></script>
     <script type="text/javascript" src="_static/js/local.js"></script>
     <script type="text/javascript" src="_static/js/bootstrap3.min.js"></script>
 <script type="text/javascript" src="_static/js/jquery.cookie.min.js"></script>
@@ -1077,6 +1079,22 @@
 
 <h3><a href="#">Table of Contents</a></h3>
 
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="_sources/index.rst.txt"
@@ -1107,23 +1125,7 @@
     <li><pre>git clone https://github.com/westurner/tools</pre></li>
     <li><pre>git clone ssh://git@github.com/westurner/tools</pre></li>
     <li><pre>git clone git://github.com/westurner/tools</pre></li>
-  </ul>
-<div id="searchbox" role="search">
-  <h3>Quick search</h3>
-  <form class="search form-inline" action="search.html" method="get">
-      <div class="input-append input-group">
-        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
-        <span class="input-group-btn">
-        <input type="submit" class="btn" value="Go" />
-        </span>
-      </div>
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
-</div><div class="widget">
+  </ul><div class="widget">
     <h3><a href="https://westurner.github.io/">@westurner</a></h3>
     <ul>
         <li><a href="https://github.com/westurner/tools/wiki">github.com/westurner/tools/wiki</a></li>
@@ -8336,7 +8338,7 @@ for <a class="reference internal" href="#vim"><span class="std std-ref">Vim</spa
       <!-- footer -->
       <footer role="contentinfo">
           &copy; Copyright 2019, Wes Turner.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 3.0.0+/3be1a31.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 3.0.0+/c4b13e5.
       </footer>
       <!-- /footer -->
 
