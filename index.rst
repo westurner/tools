@@ -5509,7 +5509,7 @@ and can write errors to stderr.
 
 :ref:`Jupyter notebook <Jupyter Notebook>` *manual* test review process:
 
-.. code:: python
+.. code::
 
     # - run Jupyter Notebook server
     !jupyter notebook
@@ -5533,7 +5533,7 @@ and can write errors to stderr.
 
 :ref:`Jupyter notebook <Jupyter Notebook>` TODO review process:
 
-.. code:: python
+.. code::
 
    # - run Jupyter Notebook server
    !jupyter notebook
@@ -5557,7 +5557,7 @@ and can write errors to stderr.
 
 :ref:`Jupyter notebook <Jupyter Notebook>` runipy review process:
 
-.. code:: python
+.. code::
 
     # - runipy the Jupyter notebook
     !runipy mynotebook.ipynb
