@@ -7333,6 +7333,8 @@ Kubernetes Ingress
 ~~~~~~~~~~~~~~~~~~~
 | Wikipedia: https://en.wikipedia.org/wiki/Kubernetes
 | Docs: https://kubernetes.io/docs/concepts/services-networking/ingress/
+| Docs: https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/
+
 
 .. index:: Documentation
 .. _documentation-tools:
