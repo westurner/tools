@@ -6198,8 +6198,11 @@ Chrome DevTools
 | Homepage: https://developer.chrome.com/devtools
 | Docs: https://developer.chrome.com/devtools
 
+How to open Chrome (and Firefox) DevTools:
+
 * Right-click > "Inspect Element"
-* OSX: ``<option>`` + ``<command>`` + ``i``
+* Linux: ``<ctrl><shift>i``
+* OSX: ``<option><command>i``
 
 DevTools Emulation
 
