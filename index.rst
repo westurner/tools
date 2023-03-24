@@ -1996,13 +1996,23 @@ programming language.
 Go
 ~~~~~~~~~~~~~
 | Wikipedia: `<https://en.wikipedia.org/wiki/Go_(programming_language)>`_
-| Homepage: https://golang.org/
-| Docs: https://golang.org/doc/
+| Homepage: https://go.dev/
 | Src: https://github.com/golang/go
-| Docs: https://learnxinyminutes.com/docs/go/
+| Docs: https://go.dev/doc/
+| Docs: https://go.dev/doc/effective_go
+| Docs: https://go.dev/security/fuzz/
+| Docs: https://pkg.go.dev/
+| Docs: https://pkg.go.dev/std
+| Docs: https://pkg.go.dev/testing
+| LearnXinYMinutes: https://learnxinyminutes.com/docs/go/
 
 Go is a free and open source
-statically-typed :reF:`C`-based third generation language.
+statically-typed :ref:`C`-based third generation language.
+
+- Go binaries may be compiled without a libc; may make direct kernel syscalls on the platform or platforms they're compiled for.
+  - https://github.com/goplus/libc
+- Better Go Playground
+  https://goplay.tools/
 
 
 .. index:: Java
