@@ -1113,6 +1113,7 @@ Git
 | Docs: https://git-scm.com/book/en/
 | Docs: https://documentup.com/skwp/git-workflows-book
 | Docs: https://learnxinyminutes.com/docs/git/
+| Docs: https://learngitbranching.js.org/
 | Src: git https://github.com/git/git
 
 
@@ -1329,6 +1330,130 @@ To clone a repository with ``hg``:
 .. code:: bash
 
    hg clone https://www.mercurial-scm.org/repo/hg
+
+
+.. index:: GitHub
+.. _github: 
+
+GitHub
+=======
+| Web: https://github.com/
+| Src: https://github.com/github
+| Docs: https://docs.github.com/en
+| Docs: https://docs.github.com/en/get-started/quickstart/git-and-github-learning-resources
+| Docs: https://skills.github.com/
+| Docs: https://github.com/skills
+| Docs: https://github.com/skills/introduction-to-github
+| StatusPage: https://www.githubstatus.com/
+
+:ref:`Git` repos, Issues, Pull Requests, Wikis, Pages, Actions, Project Boards, Webhooks
+
+- https://github.com/github/choosealicense.com
+- https://docs.github.com/en/get-started/quickstart/hello-world
+- https://docs.github.com/en/get-started/quickstart/github-flow
+- :ref:`hubflow` is a fork of :ref:`gitflow` for use with GitHub Pull requests
+
+
+.. index:: GitHub CI 
+.. index:: GitHub Actions
+
+GitHub Actions
+---------------
+| Web: https://github.com/marketplace?type=actions
+| Src: https://github.com/actions
+| Docs: https://docs.github.com/en/actions
+| Docs: https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions
+| Docs: https://docs.github.com/en/actions/quickstart#creating-your-first-workflow
+
+
+
+.. index:: GitHub Classroom
+.. _github-classroom:
+
+GitHub Classroom
+==================
+| Web: https://classroom.github.com/
+| Web: https://education.github.com/
+| Docs: https://docs.github.com/en/education/manage-coursework-with-github-classroom/get-started-with-github-classroom/about-github-classroom#github-classroom-features
+
+- :ref:`otter-grader` and :ref:`nbgrader` autograde :ref:`Jupyter` notebooks
+  (in containers for safety)
+  and can post grades to an LMS / LRS
+
+
+
+.. index:: GitLab
+.. _gitlab:
+
+GitLab
+========
+| Web: https://gitlab.com/
+| Src: https://gitlab.com/gitlab-org
+| Src: https://gitlab.com/gitlab-org/gitlab
+| Issues: https://gitlab.com/groups/gitlab-org/-/issues
+| Docs: https://docs.gitlab.com/
+| Docs: https://docs.gitlab.com/ee/user/markdown.html#where-you-can-use-gitlab-flavored-markdown
+| Docs: https://docs.gitlab.com/ee/install/install_methods.html
+| Docs: https://about.gitlab.com/direction/maturity/#package
+| Docs: https://about.gitlab.com/handbook/
+| Docs: https://about.gitlab.com/handbook/markdown-guide/
+| Docs: https://about.gitlab.com/company/kpis/
+| Docs: https://about.gitlab.com/company/okrs/
+
+
+.. index:: GitLab CI
+.. _gitlab-ci:
+
+GitLab CI
+---------------
+| Docs: https://docs.gitlab.com/ee/ci/yaml/
+| Docs: https://about.gitlab.com/competition/github/
+
+GitLab CI is an open source :ref:`Continuous Integration` system
+which runs commands in containers per tasks defined in a build :ref:`YAML` file
+on project events like `git push`, new Pull Request branch, new Issue.
+
+- `gitlab-ci.yml`
+- GitLab CI precedes :ref:`GitHub`. Travis-CI precedes GitLab CI and :ref:`GitHub Actions`. Bitten by Edgewall (Trac) precedes Travis CI.
+
+
+
+.. index:: Gitea 
+.. _gitea: 
+
+Gitea
+=======
+| Web: https://gitea.io/en-us/
+| Src: https://github.com/go-gitea/gitea
+| Docs: https://docs.gitea.io/en-us/
+| Docs: https://try.gitea.io/api/swagger
+
+Gitea is an open source project forge site written in :ref:`Go`;
+with :ref:`Git` repositories (repos), *Wiki* repos, Issues, Pull Requests; and
+:ref:`Continuous Integration` to run the build script (:ref:`YAML`) on events like `git push`, `new_issue`, and `new_pr`;
+
+:ref:`Package` repositories for released build artifacts,
+:ref:`Container` repository
+
+- https://docs.gitea.io/en-us/usage/automatically-linked-references/
+
+- https://docs.gitea.io/en-us/installation/install-with-docker-rootless/
+- https://docs.gitea.io/en-us/administration/https-setup/#using-acme-default-lets-encrypt
+- https://docs.gitea.io/en-us/installation/upgrade-from-gitea/
+- https://docs.gitea.io/en-us/administration/command-line/
+- https://docs.gitea.io/en-us/usage/repo-mirror/
+- https://github.com/maxkratz/github2gitea-mirror
+- https://docs.gitea.io/en-us/usage/packages/overview/#supported-package-managers
+- https://docs.gitea.io/en-us/usage/packages/container/
+- https://docs.gitea.io/en-us/usage/packages/conda/
+- https://docs.gitea.io/en-us/usage/packages/pypi/
+- https://docs.gitea.io/en-us/usage/packages/npm/
+- https://docs.gitea.io/en-us/administration/external-renderers/#example-jupyter-notebook
+- Gitea supports file-attachments in issues, pull requests, and releases (tagged git commits)
+- Forgejo is a fork of Gitea, like Gitea is a fork of Gogs (which is a clone of GitHub)
+  - https://github.com/topics/forgejo
+  - https://codeberg.org/forgejo/forgejo
+
 
 
 .. index:: Project Templates
