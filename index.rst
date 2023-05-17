@@ -1772,7 +1772,9 @@ MyST Markdown
 MyST Markdown is :ref:`CommonMark` :ref:`Markdown` with support
 for :ref:`Sphinx` roles and directives.
 
-- :ref:`jupyter-book` implemented MyST Markdown.
+- :ref:`jupyter-book` builds HTML (and PDF) books
+  from MyST Markdown, :ref:`ReStructuredText`, and :ref:`Jupyter` notebooks
+  in the sequence that they're listed in `_toc.yml`.
 
 
 .. index:: MediaWiki Markup
