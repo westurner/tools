@@ -1490,12 +1490,13 @@ with :ref:`Git` repositories (repos), *Wiki* repos, Issues, Pull Requests; and
 .. _gitea actions:
 
 Gitea Actions
-==============
+---------------
 - Src: https://github.com/go-gitea/gitea/tree/main/modules/actions
 - Src: https://github.com/go-gitea/gitea/tree/main/services/actions
 - Src: https://gitea.com/gitea/act_runner
 - Docs: https://docs.gitea.io/en-us/usage/usage/actions/overview/
-- https://docs.gitea.io/en-us/usage/usage/actions/quickstart/#set-up-runner
+- Docs: https://docs.gitea.io/en-us/usage/usage/actions/quickstart/#set-up-runner
+- Docs: https://docs.gitea.io/en-us/usage/usage/actions/comparison/ w/ :ref:`GitHub Actions`
 - Docs: https://blog.gitea.io/2023/03/hacking-on-gitea-actions/
 
 
