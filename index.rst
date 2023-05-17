@@ -1369,15 +1369,28 @@ GitHub
 
 .. index:: GitHub CI 
 .. index:: GitHub Actions
+.. _github-actions:
 
 GitHub Actions
 ---------------
 | Web: https://github.com/marketplace?type=actions
 | Src: https://github.com/actions
+| Src: https://github.com/actions/runner
+| Src: https://github.com/actions/runner-images
+| Src: https://github.com/actions/deploy-pages
+| Src: https://github.com/actions/upload-pages-artifact
+| Src: https://github.com/actions/upload-artifact
+| Src: https://github.com/actions/upload-release-asset
+| Src: https://github.com/softprops/action-gh-release
 | Docs: https://docs.github.com/en/actions
 | Docs: https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions
 | Docs: https://docs.github.com/en/actions/quickstart#creating-your-first-workflow
+| Docs: https://github.com/actions/starter-workflows
 
+
+- Src: https://github.com/nektos/act
+
+  - Run GitHub Actions locally; without GitHub Runner
 
 
 .. index:: GitHub Classroom
@@ -1772,9 +1785,9 @@ MyST Markdown
 MyST Markdown is :ref:`CommonMark` :ref:`Markdown` with support
 for :ref:`Sphinx` roles and directives.
 
-- :ref:`jupyter-book` builds HTML (and PDF) books
+- :ref:`jupyter-book` builds HTML, LaTeX, and PDF books
   from MyST Markdown, :ref:`ReStructuredText`, and :ref:`Jupyter` notebooks
-  in the sequence that they're listed in `_toc.yml`.
+  in the sequence listed in `_toc.yml`.
 
 
 .. index:: MediaWiki Markup
