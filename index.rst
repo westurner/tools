@@ -1108,16 +1108,17 @@ To clone a repository with ``bzr``:
 Git
 ~~~~~~~~~~~~~~
 | Wikipedia: `<https://en.wikipedia.org/wiki/Git_(software)>`_
+| Src: https://github.com/git/git
 | Homepage: https://git-scm.com/
 | Docs: https://git-scm.com/documentation
 | Docs: https://git-scm.com/book/en/
-| Docs: https://documentup.com/skwp/git-workflows-book
+| Docs: https://github.com/skwp/git-workflows-book
 | Docs: https://learnxinyminutes.com/docs/git/
 | Docs: https://learngitbranching.js.org/
-| Src: git https://github.com/git/git
+| Docs: https://www.leshenko.net/p/ugit/
+| Docs: https://github.com/westurner/dotfiles/blob/develop/etc/.gitconfig
 
-
-Git (``git``) is a distributed version control system for tracking a branching
+Git (``git``) is an open source distributed version control system for tracking a branching
 and merging repository of file revisions written in :ref:`C` (DVCS, VCS,
 RCS).
 
@@ -1126,6 +1127,10 @@ To clone a repository with ``git``:
 .. code:: bash
 
   git clone https://github.com/git/git
+  cd ./git
+  git status; git remote -av; git reflog;
+
+  git help help; git help reflog
 
 
 .. index:: GitFlow
@@ -1337,13 +1342,16 @@ To clone a repository with ``hg``:
 
 GitHub
 =======
+| Wikipedia: https://en.wikipedia.org/wiki/GitHub
 | Web: https://github.com/
 | Src: https://github.com/github
 | Docs: https://docs.github.com/en
 | Docs: https://docs.github.com/en/get-started/quickstart/git-and-github-learning-resources
+| Docs: https://docs.github.com/en/get-started/quickstart/github-glossary
 | Docs: https://skills.github.com/
 | Docs: https://github.com/skills
-| Docs: https://github.com/skills/introduction-to-github
+| Docs: **https://github.com/skills/introduction-to-github**
+| Docs: https://github.com/skills/communicate-using-markdown
 | StatusPage: https://www.githubstatus.com/
 
 :ref:`Git` repos, Issues, Pull Requests, Wikis, Pages, Actions, Project Boards, Webhooks
@@ -1352,6 +1360,7 @@ GitHub
 - https://docs.github.com/en/get-started/quickstart/hello-world
 - https://docs.github.com/en/get-started/quickstart/github-flow
 - :ref:`hubflow` is a fork of :ref:`gitflow` for use with GitHub Pull requests
+- https://github.com/abhisheknaiidu/awesome-github-profile-readme
 
 
 .. index:: GitHub CI 
@@ -1387,6 +1396,7 @@ GitHub Classroom
 
 GitLab
 ========
+| Wikipedia: https://en.wikipedia.org/wiki/GitLab
 | Web: https://gitlab.com/
 | Src: https://gitlab.com/gitlab-org
 | Src: https://gitlab.com/gitlab-org/gitlab
@@ -1399,6 +1409,9 @@ GitLab
 | Docs: https://about.gitlab.com/handbook/markdown-guide/
 | Docs: https://about.gitlab.com/company/kpis/
 | Docs: https://about.gitlab.com/company/okrs/
+| StatusPage: https://status.gitlab.com/
+
+- GitLab is written in :ref:`Ruby`, :ref:`Go`, and :ref:`JS`.
 
 
 .. index:: GitLab CI
@@ -1423,6 +1436,7 @@ on project events like `git push`, new Pull Request branch, new Issue.
 
 Gitea
 =======
+| Wikipedia: https://en.wikipedia.org/wiki/Gitea
 | Web: https://gitea.io/en-us/
 | Src: https://github.com/go-gitea/gitea
 | Docs: https://docs.gitea.io/en-us/
