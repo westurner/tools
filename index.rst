@@ -1360,6 +1360,10 @@ GitHub
 - https://docs.github.com/en/get-started/quickstart/hello-world
 - https://docs.github.com/en/get-started/quickstart/github-flow
 - :ref:`hubflow` is a fork of :ref:`gitflow` for use with GitHub Pull requests
+- https://github.com/topics/awesome
+- https://github.com/devspace/awesome-github-templates
+- https://github.com/stevemao/github-issue-templates/blob/master/must-open-issue-before-pr/PULL_REQUEST_TEMPLATE.md
+- https://github.com/stevemao/github-issue-templates/blob/master/checklist2/PULL_REQUEST_TEMPLATE.md
 - https://github.com/abhisheknaiidu/awesome-github-profile-readme
 
 
@@ -1467,6 +1471,19 @@ with :ref:`Git` repositories (repos), *Wiki* repos, Issues, Pull Requests; and
 - Forgejo is a fork of Gitea, like Gitea is a fork of Gogs (which is a clone of GitHub)
   - https://github.com/topics/forgejo
   - https://codeberg.org/forgejo/forgejo
+
+
+.. index:: Gitea Actions
+.. _gitea actions:
+
+Gitea Actions
+==============
+- Src: https://github.com/go-gitea/gitea/tree/main/modules/actions
+- Src: https://github.com/go-gitea/gitea/tree/main/services/actions
+- Src: https://gitea.com/gitea/act_runner
+- Docs: https://docs.gitea.io/en-us/usage/usage/actions/overview/
+- https://docs.gitea.io/en-us/usage/usage/actions/quickstart/#set-up-runner
+- Docs: https://blog.gitea.io/2023/03/hacking-on-gitea-actions/
 
 
 
