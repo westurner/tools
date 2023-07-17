@@ -2171,6 +2171,7 @@ Go
 | Homepage: https://go.dev/
 | Src: https://github.com/golang/go
 | Docs: https://go.dev/doc/
+| Docs: https://go.dev/learn/
 | Docs: https://go.dev/doc/effective_go
 | Docs: https://go.dev/security/fuzz/
 | Docs: https://pkg.go.dev/
@@ -2183,7 +2184,7 @@ statically-typed :ref:`C`-based third generation language.
 
 - Go binaries may be compiled without a libc; may make direct kernel syscalls on the platform or platforms they're compiled for.
   - https://github.com/goplus/libc
-- Better Go Playground
+- "Better Go Playground":  
   https://goplay.tools/
 
 
