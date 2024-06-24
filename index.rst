@@ -1053,11 +1053,12 @@ CVS (``cvs``) is a centralized version control system (VCS) written in :ref:`C`.
 CVS predates most/many other VCS.
 
 
+.. index:: SVN
 .. index:: Subversion
 .. _subversion:
 
-Subversion
-~~~~~~~~~~~~~
+svn: Subversion
+~~~~~~~~~~~~~~~~
 | Homepage: https://subversion.apache.org/
 | Wikipedia: https://en.wikipedia.org/wiki/Apache_Subversion
 | Docs: https://subversion.apache.org/docs/
@@ -1075,11 +1076,12 @@ To checkout a revision of a repository with ``svn``:
    svn co https://svn.apache.org/repos/asf/subversion/trunk subversion
 
 
+.. index:: bzr
 .. index:: Bazaar
 .. _bazaar:
 
-Bazaar
-~~~~~~~~~~
+bzr: Bazaar
+~~~~~~~~~~~~~
 | Wikipedia: https://en.wikipedia.org/wiki/GNU_Bazaar
 | Homepage: https://bazaar.canonical.com/en/
 | Homepage: https://launchpad.net/bzr
@@ -1112,7 +1114,9 @@ Git
 | Homepage: https://git-scm.com/
 | Docs: https://git-scm.com/documentation
 | Docs: https://git-scm.com/book/en/
+| Docs: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 | Docs: https://github.com/skwp/git-workflows-book
+| Docs: https://github.com/skwp/git-workflows-book#the-index
 | Docs: https://learnxinyminutes.com/docs/git/
 | Docs: https://learngitbranching.js.org/
 | Docs: https://www.leshenko.net/p/ugit/
@@ -1131,6 +1135,9 @@ To clone a repository with ``git``:
   git status; git remote -av; git reflog;
 
   git help help; git help reflog
+
+
+- :ref:`jj` auto-saves and is compatible with git
 
 
 .. index:: GitFlow
@@ -1313,13 +1320,14 @@ and understanding any DVCS workflow:
    :alt: Numbered GitFlow Workflow Diagram
    :target:  https://datasift.github.io/gitflow/GitFlowForGitHub.html
 
+
 .. index:: Hg
 .. index:: Mercurial
 .. _hg:
 .. _mercurial:
 
-Mercurial
-~~~~~~~~~~
+hg: Mercurial
+~~~~~~~~~~~~~~
 | Wikipedia: https://en.wikipedia.org/wiki/Mercurial
 | Homepage: https://www.mercurial-scm.org/
 | Docs: https://www.mercurial-scm.org/guide
@@ -1335,6 +1343,31 @@ To clone a repository with ``hg``:
 .. code:: bash
 
    hg clone https://www.mercurial-scm.org/repo/hg
+
+
+.. index:: jujutsu
+.. index:: jj
+.. _jj:
+
+jj: jujutsu
+~~~~~~~~~~~~
+| Src: https://github.com/martinvonz/jj
+| Docs: https://martinvonz.github.io/jj/latest/
+| Docs: https://martinvonz.github.io/jj/latest/cli-reference/
+
+`jj` (jujutsu) is an open source :ref:`Version Control System` that works with
+:ref:`git`.
+
+- jj auto-saves changes
+
+  From the jj docs > Concepts > Working Copy :
+  https://martinvonz.github.io/jj/latest/working-copy/ :
+
+     Unlike most other VCSs, Jujutsu will automatically create commits
+     from the working-copy contents when they have changed. Most jj
+     commands you run will commit the working-copy changes if they have
+     changed. The resulting revision will replace the previous
+     working-copy revision.
 
 
 .. index:: GitHub
@@ -1372,7 +1405,7 @@ GitHub
 .. _github-actions:
 
 GitHub Actions
----------------
+~~~~~~~~~~~~~~~
 | Web: https://github.com/marketplace?type=actions
 | Src: https://github.com/actions
 | Src: https://github.com/actions/runner
@@ -1435,7 +1468,7 @@ GitLab
 .. _gitlab-ci:
 
 GitLab CI
----------------
+~~~~~~~~~~~~~~~
 | Docs: https://docs.gitlab.com/ee/ci/yaml/
 | Docs: https://about.gitlab.com/competition/github/
 
@@ -1490,7 +1523,7 @@ with :ref:`Git` repositories (repos), *Wiki* repos, Issues, Pull Requests; and
 .. _gitea actions:
 
 Gitea Actions
----------------
+~~~~~~~~~~~~~~~
 - Src: https://github.com/go-gitea/gitea/tree/main/modules/actions
 - Src: https://github.com/go-gitea/gitea/tree/main/services/actions
 - Src: https://gitea.com/gitea/act_runner
@@ -2460,7 +2493,7 @@ CPython
 ++++++++
 | Wikipedia: `<https://en.wikipedia.org/wiki/Python_(programming_language)>`_
 | Homepage: https://www.python.org/
-| Docs: https://docs.python.org/2/
+| Docs: https://docs.python.org/
 | Docs: https://docs.python.org/devguide/
 | Docs: https://docs.python.org/devguide/documenting.html
 | Docs: https://learnxinyminutes.com/docs/python/
@@ -2469,14 +2502,23 @@ CPython
 CPython is the reference :ref:`Python` language implementation written in
 :ref:`C`.
 
-* https://github.com/python/cpython/blob/master/Grammar/Grammar
+* https://github.com/python/cpython/blob/master/Grammar/python.gram
 
 CPython can interface with other :ref:`C` libraries
 through a number of interfaces:
 
-* https://docs.python.org/2/c-api/
-* https://cffi.readthedocs.io/en/latest/
+* Python C-API: https://docs.python.org/3/c-api/
+* :ref:`CFFI`
+  | Docs: https://cffi.readthedocs.io/en/latest/
+
 * :ref:`Cython`
+
+There are other implementations of Python:
+
+* :ref:`Stackless Python`
+* :ref:`Jython`
+* :ref:`PyPy`
+* :ref:`RustPython`
 
 
 .. index:: Cython
@@ -4407,30 +4449,6 @@ and is distributed as a single :ref:`Go` binary.
 - You've heard of k8s? This is k8s - 5.
 
 
-.. index:: Kubernetes-Mesos
-.. _kubernetes-mesos:
-
-Kubernetes-Mesos
-~~~~~~~~~~~~~~~~~
-| Src: https://github.com/mesosphere/kubernetes-mesos
-
-kubernetes-mesos integrates
-:ref:`Kubernetes` :ref:`Docker` Pod scheduling with :ref:`Mesos`.
-
-.. epigraph::
-
-    Kubernetes and Mesos are a match made in heaven.
-
-    Kubernetes enables the Pod,
-    an abstraction that represents a group of co-located containers, along
-    with Labels for service discovery, load-balancing, and replication control.
-
-    Mesos provides the fine-grained resource allocations for pods
-    across nodes in a cluster,
-    and facilitates resource sharing
-    among Kubernetes and other frameworks running on the same cluster.
-
-
 .. index:: KVM
 .. _KVM:
 
@@ -4855,6 +4873,8 @@ VirtualBox:
 
 Shells
 ========
+| Wikipedia: https://en.wikipedia.org/wiki/Unix_shell
+
 
 .. index:: Bash
 .. _bash:
@@ -8740,7 +8760,6 @@ VSCode
 | Src: https://github.com/Microsoft/vscode
 | Download: https://code.visualstudio.com/Download
 | ChocolateyPkg: https://chocolatey.org/packages/vscode
-| Docs: https://code.visualstudio.com/docs
 | Docs: https://code.visualstudio.com/docs/getstarted/tips-and-tricks
 | Docs: https://code.visualstudio.com/docs/getstarted/keybindings
 
@@ -8765,6 +8784,16 @@ or with :ref:`Chocolatey`:
 .. code::
 
   choco install vscode
+
+
+.. index:: VScode Flatpak
+.. _vscode flatpak:
+
+VSCode Flatpak
+~~~~~~~~~~~~~~~
+| Flatpak: https://flathub.org/apps/com.visualstudio.code
+| Src: https://github.com/flathub/com.visualstudio.code
+
 
 
 .. index:: Vim
@@ -8823,6 +8852,28 @@ like ``j`` and ``k`` for up and down:
 - GMail (``?`` for help)
 - Facebook (``?`` for help)
 - Twitter (``?`` for help)
+
+
+.. index:: neovim
+.. neovim:
+
+neovim
+++++++++
+| Web:  https://neovim.io/
+| Src: https://github.com/neovim/neovim
+| Docs:  https://neovim.io/doc/
+| Docs:  https://neovim.io/doc/user/
+
+Neovim is an open source programmer's editor and :ref:`IDE`
+which is a rewrite of :ref:`Vim`.
+
+- Neovim supports :ref:`lua` and :ref:`vimscript` for scripting and
+  plugins.
+- Neovim does not run in a terminal like :ref:`vim`; neovim is GUI only
+  like :ref:`gvim` and :ref:`macvim`.
+- Neovim has a builtin :ref:`LSP` client,
+  so neovim can use the same LSP language servers as :ref:`vscode`
+  for code introspection and analysis.
 
 
 .. index:: westurner/dotvim
